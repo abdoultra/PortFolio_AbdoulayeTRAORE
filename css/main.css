@@ -397,8 +397,40 @@ p {
 
 .project-content p {
   flex: 1;
-  margin-bottom: 1rem;
+  margin-bottom: 0.95rem;
   color: var(--color-muted);
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.project-tags span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0.28rem 0.58rem;
+  background: #f7f2ec;
+  border: 1px solid #eadfce;
+  border-radius: 999px;
+  color: var(--color-red-dark);
+  font-family: "poppins-semibold", Arial, sans-serif;
+  font-size: 0.74rem;
+}
+
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: auto;
+}
+
+.project-actions .btn {
+  min-height: 38px;
+  padding: 0.48rem 0.85rem;
 }
 
 .timeline {
@@ -426,12 +458,6 @@ p {
 
 .timeline-item p {
   color: rgba(255, 255, 255, 0.82);
-}
-
-.certification-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.7rem;
 }
 
 .contact-section {
@@ -465,6 +491,43 @@ p {
   flex-wrap: wrap;
   gap: 0.8rem;
   justify-content: flex-end;
+}
+
+.certifications-section {
+  padding: 36px 0 70px;
+}
+
+.certifications-panel {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 1.25rem;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  background: transparent;
+  border-top: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.certifications-panel h2 {
+  margin: 0.2rem 0 0;
+  color: var(--color-red);
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
+
+.certification-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.certification-list span {
+  min-height: 30px;
+  padding: 0.28rem 0.62rem;
+  background: transparent;
+  border-color: var(--color-line);
+  color: var(--color-muted);
+  font-size: 0.78rem;
 }
 
 .site-footer {
@@ -562,6 +625,10 @@ p {
   .contact-actions {
     justify-content: flex-start;
   }
+
+  .certifications-panel {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 640px) {
@@ -584,12 +651,14 @@ p {
   }
 
   .hero-actions,
-  .contact-actions {
+  .contact-actions,
+  .project-actions {
     width: 100%;
   }
 
   .hero-actions .btn,
-  .contact-actions .btn {
+  .contact-actions .btn,
+  .project-actions .btn {
     width: 100%;
   }
 
